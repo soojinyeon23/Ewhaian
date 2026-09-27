@@ -1,0 +1,63 @@
+body {
+    max-width: 1200px;
+	margin: 0 auto; 
+	background-color: #111; 
+	color: white; 
+	font-family: "Pretendard", sans-serif;
+}
+header {
+    display: flex; 
+	align-items: center; 
+	gap: 8px; 
+	padding: 16px 0;
+}
+#title {
+	font-size: 18px; 
+	font-weight: 700;
+}
+header button, .menu {font-size: 14px;}
+header button {
+	background-color: transparent;
+	color: #3ddc3d;
+	border: 1px solid currentColor;
+	border-radius: 999px;
+	padding: 4px 12px;
+	cursor: pointer;
+	margin: 0 6px;
+}
+header button:first-of-type {margin-left: auto;}
+header button:last-of-type {margin-right: 30px;}
+.menu {margin: 0 10px;}
+nav h1 {
+	font-size: 40px; 
+	font-weight: 700; 
+	margin: 60px 0 40px;
+}
+nav button {
+	margin: 20px 6px 0;
+	background-color: transparent;
+	color: white;
+	border: 1px solid currentColor;
+	border-radius: 999px;
+	padding: 8px 15px;
+	cursor: pointer;
+}
+nav button:focus {
+	background-color: white;
+	color: black;
+}
+main {margin-top: 30px;}
+.faq {
+	background-color: #222;
+	padding: 30px 32px 40px;
+	margin-bottom: 30px;
+	border-radius: 6px;
+}
+.faq div:first-child {
+	font-weight: 700; 
+	margin-bottom: 16px;
+}
+.faq div:last-child {
+	margin-left: 24px; 
+	color: #bbb;
+}
