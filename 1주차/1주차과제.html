@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>1차과제: 웹개발팀 50기 연수진</title>
+		<style>
+			body {margin: 0 13.2%; background-color: black; color: white;}
+			/*body 전체에 검정색 배경을 두고 글씨는 흰색으로 합니다. 그리고 양 옆의 margin을 13.2%로 설정해둡니다*/
+			header {display: flex; align-items: center; gap: 8px;}
+			/*header부분에서 display flex를 써서 간격을 정할 수 있게 합니다. 이벤트들을 중앙에 두고 
+			gap을 8px으로 설정해둡니다*/
+			#title {font-size: 15px;}
+			/*title id로 설정해둔 이화이언을 15px로 설정합니다*/
+			header button, .menu {font-size: 12px;}
+			/*헤더 아래 버튼 태그 안과 header 안에 menu 클래스 안에 있는 글자 폰트를 12px로 설정해둡니다.*/
+			header button {
+				background-color: transparent;
+				color: #9be15d;
+				border: 1px solid currentColor;
+				border-radius: 999px;
+				padding: 4px 12px;
+				cursor: pointer;
+				margin: 0 6px;
+			}
+			/*버튼의 배경은 투명으로, 색은 초록색으로 하고 경계선은 현재 색, 즉 초록색으로 설정합니다.
+			그리고 border-radius를 통해 모서리를 둥글게 만듭니다. padding을 통해 공백을 주고 버튼에 대면 커서가 포인터로
+			바뀌게 합니다. margin도 주며 양 옆의 버튼 간의 사이 공백을 정합니다.*/
+			header button:first-of-type {margin-left: auto;}
+			/*header안 button 중 첫 번째에게 오른쪽 정렬하게 만듭니다. margin-left가 줄게 남은 모든 공백을 왼쪽으로 밀어서 
+			공백으로 사용한다는 뜻이다. 첫 번째 버튼에게만 주는 이유는 둘 다 주게되면 각 버튼간의 간격이 생기기 때문이다.
+			first-of-type를 쓰는 이유는 first-child로 쓰면 img가 되기 때문이다. */
+			.menu {margin: 0 10px;}
+			/*아래 menu class에 해당하는 글자들의 사이즈를 설정한다.*/
+			nav button {
+				margin: 20px 6px 0;
+				background-color: transparent;
+				color: white;
+				border: 1px solid currentColor;
+				border-radius: 999px;
+				padding: 4px 12px;
+				cursor: pointer;
+			}
+			/*nav 안에 속한 button의 margin을 정하고 배경은 투명하게, 색은 흰색으로, 테두리는 현재 색인 흰색으로
+			설정하고 border-radius를 통해 모서리를 둥글게 만들고 padding을 통해 사이즈를 조정한다. 그리고 커서가 버튼에 대면
+			포인터로 바뀌게 한다.*/
+			nav button:focus {
+				background-color: white;
+				color: black;
+			}
+			/*button에 커서를 대면(focus) 버튼의 배경색이 흰색이 바뀌고 폰트의 색은 검정색으로 변한다.*/
+			.faq {
+				background-color: #333;
+				padding: 30px 30px;
+				margin-top: 30px;
+				margin-bottom: 30px;
+				border-radius: 12px;
+			}
+			/*faq 클래스에 속한 사각형들의 배경색을 회색으로 하고 padding을 설정하여 사이즈를 정하고 margin으로 
+			top과 bottom 사이즈를 정하고 border-radius를 통해 모서리를 둥글게 만든다.*/
+			.faq div:first-child {margin-bottom: 15px;}
+			/*faq클래스에 속한 first-child인 질문 문장 아래 margin을 두어 각 문장들 사이에 공백을 추가합니다.*/
+			.faq div:last-child {margin-left: 20px;}
+			/*질문과 답변을 보니 Q 뒤에 나오는 질문과 답변의 시작 위치가 같아서 수정했습니다.*/
+		</style>
+	</head>
+	<!--바디는 header, nav, main으로 나누었습니다. aside는 이 경우에는 없다고 판단했습니다.
+	header에는 이화이언 로고와 버튼 2개와 옆에 추가 이벤트들이 있었습니다. 이를 반영하여 구조를 구성하였습니다. 
+	nav에는 큰 제목 하나와 아래 세 가지 버튼이 있었습니다. 이를 반영하여 구조를 구성했습니다.
+	main에는 3가지 질문과 이에 대한 답변이 있었습니다. 사각형 속 안에 또 다른 문장들이 구조로 나뉘었기 때문에
+	이를 나누어서 구조를 구성하였습니다. -->
+	<body>
+		<header>
+			<img src="ewhaianlogo.png" width="30" height="30">
+			<a id="title">이화이언</a>
+			<button>지원하기</button>
+			<button>결과확인</button>
+			<a class="menu">이화이언 소개</a>
+			<a class="menu">팀 소개</a>
+			<a class="menu">지난 이화이언</a>
+			<a class="menu">자주 묻는 질문</a>
+		</header>
+		<nav>
+			<h1>자주 묻는 질문</h1>
+			<button>운영진 지원 관련 질문</button>
+			<button>운영진 활동 관련 질문</button>
+			<button>기타</button>
+		</nav>
+		<main>
+			<div class="faq">
+				<div>Q. 운영진 모집에 있어 우대하는 학과가 있나요?</div>
+				<div>   아니요! 이화이언 운영진에는 다양한 전공의 벗들이 속해 있어,
+					이화이언을 사랑하는 마음과 열정으로 충분히 운영진 활동을 펼쳐나갈 수 있답니다!</div>
+			</div>
+			<div class="faq">
+				<div>Q. 지원서를 잘 못 제출했는데, 수정이 가능할까요?</div>
+				<div>   네, 지원서 제출 기한 전까지는 지원하기 페이지에서
+					기존 지원자를 선택하시면 해당 페이지에서 수정이 가능합니다.</div>
+			</div>
+			<div class="faq">
+				<div>Q. 운영진 활동을 위한 필수 조건이 있나요?</div>
+				<div>   이화이언에 대한 애정과 열정이 제일 중요하겠지만, 학번에 상관 없이 최소 3학기 활동이 가능해야합니다.</div>
+			</div>
+		</main>
+	</body>
+</html>
