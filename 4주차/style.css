@@ -1,0 +1,8 @@
+/*submit을 하면 form 자체를 없애는 방법 
+1. html을 다 없애는 방법 
+2. CSS로 hide 방법*/ 
+
+.hidden {
+    display: none;
+    /*이 class name을 주면 다 숨겨짐*/
+}
